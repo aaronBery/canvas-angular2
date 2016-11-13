@@ -1,0 +1,45 @@
+<div class="row">
+    <h1>{{title}}</h1>
+    <div class="col-xs-12">
+    <ul class="canvas">
+        <li *ngFor="let item of items.toArray(); let i = index;" [ngClass]="{'current' : editItemIndex === i}">
+        <h3>{{item.name}}</h3>
+        <a href="{{item.socialValueSourceUrl}}" target="_blank">
+            <img src="{{item.imageUrl}}" />
+        </a> 
+        <p>Remove Item <a (click)="removeItem(i)" class="fa fa-minus-circle"></a></p>
+        <p>Duplicate Item <a (click)="duplicateItem(item.id)" class="fa fa-files-o"></a></p>
+        <p>Edit Item <a (click)="editItem(i)" class="fa fa-pencil-square-o"></a></p>
+        </li>
+    </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-4" *ngIf="!isEditItemMode">
+        <h3>Add a new review</h3>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="newItem.name" placeholder="name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="newItem.socialValueSourceUrl" placeholder="Review Url" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="newItem.imageUrl" placeholder="Image Url" class="form-control" />
+        </div>
+        <button type="submit" (click)="onSubmit()" class="btn btn-default">Add New Review</button>
+    </div>
+    <div class="col-xs-12 col-md-4" *ngIf="isEditItemMode">
+    <h3>Edit review</h3>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="tempEditItem.name" placeholder="name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="tempEditItem.socialValueSourceUrl" placeholder="Review Url" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="tempEditItem.imageUrl" placeholder="Image Url" class="form-control" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4"></div>
+    <div class="col-xs-12 col-md-4"></div>
+</div>
