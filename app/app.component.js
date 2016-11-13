@@ -12,10 +12,9 @@ var core_1 = require('@angular/core');
 var wall_item_1 = require('./wall-item');
 var wall_1 = require('./wall');
 var ibo_1 = require('./ibo');
-var item1 = new wall_item_1.WallItem(0, 'Kia Sportage', 'http://www.telegraph.co.uk/cars/land-rover/range-rover-sport-review/', 'http://www.kia.com/us/k3/content/media/mediabin/vehicle/trims/CMS/vehicles/sportage/2017/cgi/lx/exterior/9p_black-cherry/source/17Kia_Sportage_LX_9P_BlackCherry_LgtsOn_1302_001--trim-768x419.png');
-var item2 = new wall_item_1.WallItem(1, 'Range Rover Evoque', 'http://www.topgear.com/car-reviews/land-rover/range-rover-evoque', 'http://www.topgear.com/sites/default/files/styles/fit_1960x1102/public/cars-car/carousel/2016/07/evoquehseluxurydynamic001.jpg?itok=5S_UYuf4');
+var item1 = new wall_item_1.WallItem(0, 'Kia Sportage', '#', '../assets/images/kia.jpg');
+var item2 = new wall_item_1.WallItem(1, 'Lamborghini', '#', '../assets/images/lambo.jpeg');
 var wall = new wall_1.Wall(1, 'SUV Reviews', new ibo_1.Ibo([item1, item2]));
-/*let wall = wallService.getWall(1);*/
 var newItem = new wall_item_1.WallItem(wall.getNewItemId());
 var isEditItemMode = false;
 var editItemIndex = -1;

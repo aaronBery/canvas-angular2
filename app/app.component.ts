@@ -6,19 +6,17 @@ import { Ibo } from './ibo';
 let item1 = new WallItem (
 0,
 'Kia Sportage',
-'http://www.telegraph.co.uk/cars/land-rover/range-rover-sport-review/',
-'http://www.kia.com/us/k3/content/media/mediabin/vehicle/trims/CMS/vehicles/sportage/2017/cgi/lx/exterior/9p_black-cherry/source/17Kia_Sportage_LX_9P_BlackCherry_LgtsOn_1302_001--trim-768x419.png'
+'#',
+'../assets/images/kia.jpg'
 )
 let item2 = new WallItem (
 1,
-'Range Rover Evoque',
-'http://www.topgear.com/car-reviews/land-rover/range-rover-evoque',
-'http://www.topgear.com/sites/default/files/styles/fit_1960x1102/public/cars-car/carousel/2016/07/evoquehseluxurydynamic001.jpg?itok=5S_UYuf4'
+'Lamborghini',
+'#',
+'../assets/images/lambo.jpeg'
 )
 
 let wall = new Wall(1, 'SUV Reviews', new Ibo([item1, item2]));
-
-/*let wall = wallService.getWall(1);*/
 
 let newItem = new WallItem(wall.getNewItemId());
 let isEditItemMode: boolean = false;
